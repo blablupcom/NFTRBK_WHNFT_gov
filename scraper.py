@@ -90,7 +90,9 @@ data = []
 
 #### READ HTML 1.0
 
-html = urllib2.urlopen(url)
+req = urllib2.Request(url)
+gcontext = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
+html = urllib2.urlopen(req, context=gcontext)
 soup = BeautifulSoup(html, 'lxml')
 
 
