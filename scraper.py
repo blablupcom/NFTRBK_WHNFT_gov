@@ -84,7 +84,7 @@ def convert_mth_strings ( mth_string ):
 #### VARIABLES 1.0
 
 entity_id = "NFTRBK_WHNFT_gov"
-url = "https://www.walsallhealthcare.nhs.uk/Default.aspx?pageid=2638&mid=73&ItemID=30"
+url = "http://www.walsallhealthcare.nhs.uk/Default.aspx?pageid=2638&mid=73&ItemID=30"
 errors = 0
 data = []
 
