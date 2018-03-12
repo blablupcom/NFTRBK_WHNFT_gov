@@ -89,7 +89,7 @@ errors = 0
 data = []
 
 #### READ HTML 1.0
-
+import ssl
 req = urllib2.Request(url)
 gcontext = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
 html = urllib2.urlopen(req, context=gcontext)
