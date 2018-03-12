@@ -108,11 +108,11 @@ for link in links:
         blocks = soup.find('div', id='ctl00_mainContent_ctl00_divContent').find_all('a')
         for block in blocks:
             l = block['href']
-            if '.csv' in l or '.xls' in l or 'xlsx' in l:
+            if '.csv' in l:
                 url = 'https://www.walsallhealthcare.nhs.uk'+l
-                title = block.previousSibling.previousSibling.previousSibling
-                csvMth = title[:3]
-                csvYr = title.split(' ')[1]
+                title = block.text
+                csvMth = title.split('for ')[-1].split(' -')[0][:3]
+                csvYr = title.split('for ')[-1].split(' -')[0].replace(u' - csv format', '')[-4:]
                 csvMth = convert_mth_strings(csvMth.upper())
                 data.append([csvYr, csvMth, url])
     if '2014 Expenditure' in page_title:
@@ -129,6 +129,17 @@ for link in links:
                     csvYr = title[-4:]
                     csvMth = convert_mth_strings(csvMth.upper())
                     data.append([csvYr, csvMth, url])
+    if '2015 Expenditure' in page_title:
+        blocks = soup.find('div', id='ctl00_mainContent_ctl00_divContent').find_all('a')
+        for block in blocks:
+            l = block['href']
+            if '.csv' in l:
+                url = 'https://www.walsallhealthcare.nhs.uk'+l
+                title = block.text
+                csvMth = title.split('for ')[-1].split(' -')[0][:3]
+                csvYr = title.split('for ')[-1].split(' -')[0].replace(u' - csv format', '')[-4:]
+                csvMth = convert_mth_strings(csvMth.upper())
+                data.append([csvYr, csvMth, url])
     if '2012 Expenditure' in page_title:
         blocks = soup.find('div', id='ctl00_mainContent_ctl00_divContent').find_all('a')
         for block in blocks:
