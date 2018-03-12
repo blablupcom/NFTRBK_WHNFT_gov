@@ -90,8 +90,8 @@ data = []
 
 #### READ HTML 1.0
 import requests
-req = requests.get(url)
-soup = BeautifulSoup(req.text, 'lxml')
+html = requests.get(url, verify=False)
+soup = BeautifulSoup(html.text, 'lxml')
 
 
 #### SCRAPE DATA
