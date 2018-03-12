@@ -89,11 +89,9 @@ errors = 0
 data = []
 
 #### READ HTML 1.0
-import ssl
-req = urllib2.Request(url)
-gcontext = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
-html = urllib2.urlopen(req, context=gcontext)
-soup = BeautifulSoup(html, 'lxml')
+import requests
+req = requests.get(url)
+soup = BeautifulSoup(req.text, 'lxml')
 
 
 #### SCRAPE DATA
