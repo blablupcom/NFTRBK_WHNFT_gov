@@ -8,6 +8,7 @@ import scraperwiki
 import urllib2
 from datetime import datetime
 from bs4 import BeautifulSoup
+print requests.__version__
 
 #### FUNCTIONS 1.0
 
@@ -92,7 +93,6 @@ data = []
 import requests
 html = requests.get(url, verify=False)
 soup = BeautifulSoup(html.text, 'lxml')
-print requests.__version__
 
 
 #### SCRAPE DATA
