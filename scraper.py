@@ -92,6 +92,7 @@ data = []
 import requests
 html = requests.get(url, verify=False)
 soup = BeautifulSoup(html.text, 'lxml')
+print requests.__version__
 
 
 #### SCRAPE DATA
