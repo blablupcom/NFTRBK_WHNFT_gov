@@ -9,7 +9,6 @@ import urllib2
 from datetime import datetime
 from bs4 import BeautifulSoup
 import requests
-print requests.__version__
 
 #### FUNCTIONS 1.0
 
@@ -92,7 +91,7 @@ data = []
 
 #### READ HTML 1.0
 import requests
-html = requests.get(url, verify=False)
+html = requests.get(url)
 soup = BeautifulSoup(html.text, 'lxml')
 
 
