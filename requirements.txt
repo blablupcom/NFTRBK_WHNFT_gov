@@ -2,6 +2,7 @@
 lxml==3.4.4
 cssselect==0.9.1
 beautifulsoup4
-pyopenssl==0.13.1
+requests[security]==2.7.0
+cryptography==1.9
 pyasn1
 ndg-httpsclient
