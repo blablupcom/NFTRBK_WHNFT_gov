@@ -8,6 +8,7 @@ import scraperwiki
 import urllib2
 from datetime import datetime
 from bs4 import BeautifulSoup
+import requests
 print requests.__version__
 
 #### FUNCTIONS 1.0
