@@ -9,6 +9,8 @@ import urllib2
 from datetime import datetime
 from bs4 import BeautifulSoup
 import requests
+import ssl
+print ssl.OPENSSL_VERSION
 
 #### FUNCTIONS 1.0
 
