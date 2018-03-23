@@ -4,3 +4,4 @@ cssselect==0.9.1
 beautifulsoup4
 pyasn1
 ndg-httpsclient
+pyOpenSSL==17.5.0
